@@ -1,6 +1,6 @@
 {
   "name": "moxup",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple and intuitive way to generate mockup objects in JSON format.",
   "main": "moxup.js",
   "scripts": {
