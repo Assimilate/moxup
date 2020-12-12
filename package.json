@@ -1,0 +1,26 @@
+{
+  "name": "moxup",
+  "version": "1.0.0",
+  "description": "A simple and intuitive way to generate mockup objects in JSON format.",
+  "main": "moxup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mock",
+    "Mockup",
+    "Moxup",
+    "moxup",
+    "Mox",
+    "mox",
+    "Profile",
+    "Product",
+    "Generator",
+    "generator"
+  ],
+  "author": "Assimilate",
+  "license": "ISC",
+  "dependencies": {
+    "g-i-s": "^2.1.6"
+  }
+}
