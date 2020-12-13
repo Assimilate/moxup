@@ -1,11 +1,15 @@
 # moxup
 A simple and intuitive way to generate mockup profile picture objects in JSON format.
 
-Many thanks to the creator @jimkang and contributors of g-i-s [link](https://github.com/jimkang/g-i-s) 
+Many thanks to the creator @jimkang and contributors of [g-i-s](https://github.com/jimkang/g-i-s) 
+
+Based on my other work generating random names [moxname](https://www.npmjs.com/package/moxname) 
 
 To install run:
 
-**npm i moxup**
+```bash
+npm i moxup
+```
 
 <h1>Functionality</h1>
 
