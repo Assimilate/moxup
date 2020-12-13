@@ -16,4 +16,4 @@ Using
 getProfilePictures(amount, gender) 
 ```
 will return a promise, JSON object array, with urls for profile pictures. 
-A maximum of 10 pictures per function call is allowed. 
+A maximum of 10 pictures per function call is returned in the promise. 
