@@ -2,7 +2,7 @@
   "name": "moxup",
   "version": "1.0.3",
   "description": "A simple and intuitive way to generate mockup objects in JSON format.",
-  "main": "moxup.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,7 @@
   "author": "Assimilate",
   "license": "ISC",
   "dependencies": {
-    "g-i-s": "^2.1.6"
+    "g-i-s": "^2.1.6",
+    "moxname": "^1.0.4"
   }
 }

@@ -1,7 +1,7 @@
 const gis = require('g-i-s')
+const moxname = require('moxname')
 
-const listOfFemaleNames = ['Sandra', 'Joanna', 'Johanna', 'Sylvia', 'Julia']
-const listOfMaleNames = ['Daniel', 'Max', 'Filip', 'David', 'John']
+const amountOfUniqueNames = 50
 const extensions = ['jpg', 'png']
 
 async function getImageObjects(query) {
@@ -24,8 +24,8 @@ async function getProfilePictures(amount, gender) {
     if (amount > 10) {
         throw new Error('Amount of picture can be maximum 10.')
     }
-    let genderName = pickNameRandomly(getListBasedOnGender(gender))
-    let query = gender + ' ' + genderName + ' profile ' + 'picture'
+    let name = pickNameRandomly(getFullNamesBasedOnGender(gender))
+    let query = name + ' ' + gender + ' profile ' + 'picture'
     let imageObjects
     try {
         imageObjects = await getImageObjects(query)
@@ -37,14 +37,12 @@ async function getProfilePictures(amount, gender) {
     return imageObjects
 }
 
-function getListBasedOnGender(gender) {
-    if (gender.toLowerCase() === 'male') {
-        return listOfMaleNames
-    } else if (gender.toLowerCase() === 'female') {
-        return listOfFemaleNames
-    } else {
-        throw new Error('Gender must be male or female, for this query to be precise.')
-    }
+function getFirstNamesBasedOnGender(gender) {
+    return moxname.getFirstName(gender, 50)
+}
+
+function getFullNamesBasedOnGender(gender) {
+    return moxname.getFullName(gender, 50)
 }
 
 function pickNameRandomly(listOfGenderNames) {
