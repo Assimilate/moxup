@@ -20,8 +20,9 @@ async function getImageObjects(query) {
 }
 
 async function getImage(query) {
+  let images;
   try {
-    let images = await getImageObjects(query);
+    images = await getImageObjects(query);
     image = filterImages(1, images)[0];
   } catch (err) {
     throw new Error("Can not retrieve image.");
