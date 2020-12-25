@@ -18,7 +18,18 @@ async function getImageObjects(query) {
                 }
             })
     })
-}
+},
+
+async function getImage(query) {
+    try {
+        let images = await getImageObjects(query)
+        image = filterImages(1, images)[0]
+    } catch(err) {
+        throw new Error('Can not retrieve image.')
+    }
+    if (!images) throw new Error('No image objects fitting your query was found.')
+    return image
+},
 
 async function getProfilePictures(amount, gender) {
     if (amount > 10) {
